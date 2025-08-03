@@ -5,7 +5,7 @@ class tokenizer:
         self.index = 0
         
     def encode(self, p: str):
-        a = p.split()
+        a = p.lower().split()
         c = []
         for i in a:
             if i in self.vocab:
@@ -21,7 +21,7 @@ class tokenizer:
         self.tokenization_vocab(a)
         
     def tokenization_vocab(self, p: str):
-        a = p.split()
+        a = p.lower().split()
         for i in a:
             if i not in self.vocab:
                 self.vocab[i] = self.index
