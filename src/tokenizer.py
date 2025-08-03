@@ -5,9 +5,18 @@ class tokenizer:
         self.index = 0
         
     def encode(self, p: str):
-        pass
-            
+        a = p.split()
+        c = []
+        for i in a:
+            if i in self.vocab:
+                c.append(self.vocab[i])
+            else:
+                c.append("<unk>")    
+        return c 
     
+    def decode():
+        pass       
+                
     def build_vocab(self, a: str):
         self.tokenization_vocab(a)
         
