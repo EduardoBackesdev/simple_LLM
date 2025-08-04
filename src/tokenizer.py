@@ -14,8 +14,12 @@ class tokenizer:
                 c.append("<unk>")    
         return c 
     
-    def decode():
-        pass       
+    def decode(self, a: list[int]):
+        c = []
+        for i in a:
+            if i in self.vocab.values():
+                print(i, self.vocab.values())
+                exit()
                 
     def build_vocab(self, a: str):
         self.tokenization_vocab(a)

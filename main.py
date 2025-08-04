@@ -4,7 +4,8 @@ from src.training import training
 def main():
     a = training().training("Ola mundo como voces estão?")
     t = tokenizer()
-    t.encode("Ola mundo")    
+    tokens = t.encode("Ola mundo") 
+    t.decode(tokens);   
     
     
 if __name__ == "__main__":
