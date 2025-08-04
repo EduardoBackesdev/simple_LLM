@@ -1,9 +1,6 @@
-from tokenizer import tokenizer
+from src.tokenizer import tokenizer
 
 class training:
     
-    def training():
-        a = tokenizer().build_vocab()
-    
-    # if __name__ == "__training__":
-    #     training()     
+    def training(self, p: str):
+        tokenizer().build_vocab(p)   

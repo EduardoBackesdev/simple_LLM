@@ -2,6 +2,7 @@ class tokenizer:
     
     def __init__(self):
         self.vocab = {}
+        self.vocab_invert = {}
         self.index = 0
         
     def encode(self, p: str):
@@ -17,9 +18,8 @@ class tokenizer:
     def decode(self, a: list[int]):
         c = []
         for i in a:
-            if i in self.vocab.values():
-                print(i, self.vocab.values())
-                exit()
+            if i in self.vocab_invert:
+                c.append(self.vocab_invert[i])        
                 
     def build_vocab(self, a: str):
         self.tokenization_vocab(a)
@@ -29,4 +29,7 @@ class tokenizer:
         for i in a:
             if i not in self.vocab:
                 self.vocab[i] = self.index
+                self.vocab_invert[self.index] = i
                 self.index += 1
+                
+                
