@@ -3,7 +3,7 @@ from src.training import training
 
 def main():
     a = tokenizer()
-    t = training(a).training("Ola mundo")
+    training(a).training("Ola mundo")
     a.decode([1, 1])
   
     
