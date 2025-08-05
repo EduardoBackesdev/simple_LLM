@@ -2,7 +2,9 @@ from src.tokenizer import tokenizer
 from src.training import training
 
 def main():
-    pass
+    a = tokenizer()
+    t = training(a).training("Ola mundo")
+    a.decode([1, 1])
   
     
     

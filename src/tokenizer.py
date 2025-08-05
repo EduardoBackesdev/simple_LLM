@@ -12,14 +12,15 @@ class tokenizer:
             if i in self.vocab:
                 c.append(self.vocab[i])
             else:
-                c.append("<unk>")    
+                c.append("<unk>")           
         return c 
     
     def decode(self, a: list[int]):
         c = []
         for i in a:
             if i in self.vocab_invert:
-                c.append(self.vocab_invert[i])        
+                c.append(self.vocab_invert[i])
+        return " ".join(c)              
                 
     def build_vocab(self, a: str):
         self.tokenization_vocab(a)
