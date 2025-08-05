@@ -13,5 +13,5 @@ class embeddings:
             c.append(self.matriz[i])
         return c    
                    
-    def update_embeddings(self, a):
+    def update_embeddings(self, a, b):
         pass
