@@ -14,4 +14,4 @@ class embeddings:
         return c    
                    
     def update_embeddings(self, a, b):
-        
+        pass
